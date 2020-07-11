@@ -5,8 +5,7 @@ import { App1SharedModule } from '../../projects/app1/src/app/app.module';
 
 const routes: Routes = [
   { path: 'page-from-host', component: HostAppPageComponent },
-  {path: 'page-with-nested-app', loadChildren: '../../projects/app1/src/app/app.module#App1SharedModule'},
-  { path: '**', redirectTo: '/page-with-nested-app'}
+  { path: 'page-with-nested-app', loadChildren: '../../projects/app1/src/app/app.module#App1SharedModule'},
 ];
 
 @NgModule({
