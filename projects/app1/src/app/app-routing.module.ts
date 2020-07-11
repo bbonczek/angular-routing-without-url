@@ -19,12 +19,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NestedAppFirstPageComponent } from './first-page.component';
 import { NestedAppSecondPageComponent } from './second-page.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: 'page-with-nested-app/first-page-from-nested-app', component: NestedAppFirstPageComponent },
-  { path: 'page-with-nested-app/second-page-from-nested-app', component: NestedAppSecondPageComponent   },
-  { path: 'page-with-nested-app', redirectTo: 'page-with-nested-app/second-page-from-nested-app' }
-  // { path: '**', redirectTo: '/page-with-nested-app/first-page-from-nested-app'}
+  { path: 'page-with-nested-app', component: AppComponent, children: [
+    { path: 'first-page-from-nested-app', component: NestedAppFirstPageComponent  },
+    { path: 'second-page-from-nested-app', component: NestedAppSecondPageComponent },
+  ]},
+
 ];
 
 @NgModule({

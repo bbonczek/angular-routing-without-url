@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   <a class="pure-button" href="/page-from-host">Open page from Host</a>
   <a class="pure-button" href="/page-with-nested-app">Open page from Host</a>
   <div class="pure-u-1 nested-app-space">
-  <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
   </div>
   `,
   styles: [`
@@ -20,8 +20,14 @@ import { Component } from '@angular/core';
     }
 
     .nested-app-space {
+      min-height: 700px;
       background: green;
-      height: 400px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nested-app-space *{
+      margin: 30px;
     }
   `]
 })
