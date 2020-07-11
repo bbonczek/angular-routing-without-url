@@ -10,8 +10,8 @@ import { Component } from '@angular/core';
   </div>
   <div class="pure-g">
     <div class="pure-u-1 main-div">
-    <a class="pure-button" href="/page-from-host">Open page from Host</a>
-    <a class="pure-button" href="/page-with-nested-app">Open page from Host</a>
+    <a class="pure-button" routerLink="page-from-host">Open page from Host</a>
+    <a class="pure-button" routerLink="/page-with-nested-app">Open page from Host</a>
     <div class="pure-u-1-3 nested-app-space">
         <router-outlet></router-outlet>
     </div>

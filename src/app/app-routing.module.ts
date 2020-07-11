@@ -9,7 +9,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
+  imports: [RouterModule.forRoot(routes, { useHash: true }),
     App1SharedModule.forRoot(),
   ],
   exports: [RouterModule]
