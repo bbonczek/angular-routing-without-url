@@ -1,17 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
   $color-1: #1a1a1a;
   $color-2: #fefefe;
   $pad:     0.925rem;
 
-  html,
-  body{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: Roboto;
-    height: 100%;
-  }
   .hide{
     display: none;
   }
