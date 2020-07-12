@@ -28,20 +28,18 @@ import { Component } from '@angular/core';
     }
 
     .grid-child {
-      width: 80%;
+      margin: 15px;
     }
 
     .horizontal-grid-area {
-      justify-content: center;
       display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-template-rows: 1fr 1fr 8fr;
+      gap: 10px 10px;
+      grid-template-areas: "first-button nested-app-space" "second-button nested-app-space" ". nested-app-space";
 
-      grid-template-areas:
-        " . first-button nested-app-space . "
-        " . second-button nested-app-space . "
-        " . . nested-app-space . ";
 
-      grid-template-columns: 1fr 2fr 6fr 1fr;
-      grid-template-rows: 1fr 1fr 6fr;
+      justify-content: center;
     }
 
     .first-button {
@@ -54,7 +52,7 @@ import { Component } from '@angular/core';
 
     .nested-app-space {
       grid-area: nested-app-space;
-      background: yellow;
+      background: rgba(237, 28, 91, 0.4);
       height: 400px;
     }
   `]
