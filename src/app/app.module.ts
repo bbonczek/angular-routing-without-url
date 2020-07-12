@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { App1SharedModule } from "../../projects/app1/src/app/app.module";
 import { HostAppPageComponent } from './page-from-host-app.component';
+import { LocationStrategy, PlatformLocation } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,9 +14,7 @@ import { HostAppPageComponent } from './page-from-host-app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // App1SharedModule.forRoot(),
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

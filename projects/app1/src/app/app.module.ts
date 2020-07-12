@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NestedAppFirstPageComponent } from './first-page.component';
 import { NestedAppSecondPageComponent } from './second-page.component';
+import { PlatformLocation } from '@angular/common';
+import { ServerPlatformLocation } from '../mock-platform-location';
 
 const providers = [];
 @NgModule({
@@ -17,7 +19,7 @@ const providers = [];
     BrowserModule,
     AppRoutingModule
   ],
-  providers: providers,
+  // providers: [{provide: PlatformLocation, useClass: ServerPlatformLocation}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
